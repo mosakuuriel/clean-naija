@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean ☘ Naija</title>
+    <link rel="icon" href="images/OIP.webp">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary position">
+        <div class="container-fluid">
+            <a class="navbar-brand fs-1" href="#">Clean<span class="bg-success text-white p-1 fs-3"><i
+                        class="fa-solid fa-leaf"></i>NAIJA</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#how">How we work</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="public.html">Public Cleaning</a></li>
+                            <li><a class="dropdown-item" href="house.html">House Cleaning</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <nav class="navbar bg-body-tertiary">
+                    <form class="container-fluid justify-content-start">
+                        <a href="09035066048"  class="btn btn-outline-success me-2" type="tel">09035066048</a>
+                    </form>
+                </nav>
+
+                            <button id="themeToggle" class="btn btn-dark">
+                <i class="fa-solid fa-moon"></i> Dark Mode
+            </button>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <section class=" herosection container-fluid">
+        <div class="container p-5">
+            <p class="para"><i class="fa-solid fa-diamond"></i> Trusted Cleaning Company in <span id="typing"></span> <i
+                    class="fa-solid fa-diamond"></i>
+            </p>
+            <h1>Cleaner Streets. </h1>
+            <h2>Healthier Communities.</h2>
+            <p class="speech col-md-7">Together, we can build cleaner streets, healthier communities, and a greener
+                future. Report dirty public
+                spaces or book professional cleaning for your home. Every action counts towards a cleaner Nigeria.
+            </p>
+
+
+            <a href="contact.html" class="btn btn-success me-3">Contact us</a>
+
+            <a href="explore.html" class="btn btn-outline-success">Explore Our Services</a>
+        </div>
+    </section>
+
+    <main class="container-fluid container">
+        <div class="row">
+            <div class="col-12 col-md-12 col-lg-4 cl">
+                <div class="climate">
+                    <img src="images/WhatsApp Image 2026-10-25 at 23.13.25.jpeg" alt="">
+                    <h2>Green Living</h2>
+                    <p>learn how to live sustainably</p>
+                </div>
+
+            </div>
+
+            <div class="col-12 col-md-12 col-lg-4 cl">
+                <div class="climate">
+                    <img src="images/WhatsApp Image 2026-10-25 at 23.29.42.jpeg" alt="">
+                    <h2>Coastal Care</h2>
+                    <p>Safeguarding our blue planet</p>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-12 col-lg-4 cl">
+                <div class="climate">
+                    <img src="images/WhatsApp Image 2026-10-25 at 23.40.09.jpeg" alt="">
+                    <h2>Climate Action</h2>
+                    <p>Take steps to fight climate change</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <header id="about">
+        <div class="container-fluid abt text-center my-5">
+            <div class="row">
+                <div>
+                    <h2>About Clean<span class="bg-success text-white p-1 fs-3"><i
+                                class="fa-solid fa-leaf"></i>NAIJA</span></h2>
+                    <p class="lead mb-0">
+
+                        Cleaner Streets. Healthier Communities. <br>
+
+                        Looking at the state of our environment today, from waste piling up on our streets to neglected
+                        public spaces and dirty surroundings, it is clear that something needs to change. Our
+                        communities deserve cleaner streets, healthier communities, and a better environment for future
+                        generations.
+
+                        That is why Clean Naija is here.
+
+                        Our mission is to make a difference through two essential services. We help tackle public-space
+                        cleanliness by allowing people to report dirty public areas and supporting cleanup efforts
+                        without collecting a dime for public cleaning. We believe everyone deserves a cleaner
+                        environment, regardless of their financial situation.
+
+                        We also provide paid house and compound cleaning services for people who need professional
+                        help keeping their homes clean and comfortable.
+
+                        Starting in Lagos and Ogun State, we aim to turn concern into action, one street, one home, and
+                        one community at a time. Together, we can take responsibility for our surroundings and build a
+                        cleaner future for Nigeria.
+
+                        Clean Naija — Cleaner Streets. Healthier Communities.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-12 col-lg-5 abtimg">
+                <img src="images/WhatsApp Image 2026-10-26 at 06.37.28.jpeg" class="img-fluid" alt="FoodBuka">
+            </div>
+
+
+            <div class="col-12 col-md-12 col-lg-7">
+                <h1>Who we are</h1>
+                <p> Born From a Need for Change.
+
+                    Clean Naija was born from a simple but powerful realisation in October 26th, 2026: our communities
+                    deserve better.
+
+                    From overflowing refuse dumps in parts of Lagos to blocked drainage channels in areas such as
+                    Mushin, Agege, and Ikorodu, we see the challenges that poor waste disposal creates for everyday
+                    Nigerians. The foul smells, littered streets, and neglected surroundings are more than an eyesore;
+                    they affect the comfort, health, and well-being of our communities.
+
+                    We believe that a cleaner Nigeria is possible, but change begins when people take action.
+
+                    That is why Clean Naija exists: to give people a way to report dirty public spaces and support
+                    cleanup efforts without collecting a dime for public cleaning, while also offering paid house
+                    and compound cleaning services to those who need them.
+
+                    Starting in Lagos and Ogun State, we want to turn neglected surroundings into cleaner spaces and
+                    inspire more Nigerians to take pride in their environment.
+
+                    We are Clean Naija. We believe every street deserves cleanliness, every community deserves care,
+                    and every Nigerian deserves a healthier environment.
+                </p>
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Policy
+                </button>
+
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Clean<span
+                                        class="bg-success text-white p-1 fs-3"><i
+                                            class="fa-solid fa-leaf"></i>NAIJA</span></h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                🌿 Trained, Certified & Trusted
+
+                                At Clean Naija, quality and safety come first. We ensure that our cleaning personnel
+                                undergo appropriate training and obtain relevant certifications to equip them with the
+                                skills and knowledge needed to deliver professional cleaning services.
+
+                                From proper cleaning techniques to hygiene, waste handling, and safety practices, we
+                                prioritise professionalism and responsibility in every task.
+
+                                Whether we're cleaning public spaces for free or providing paid house-cleaning services,
+                                our commitment remains the same: delivering cleaner spaces through trained and qualified
+                                personnel.
+
+                                Clean Naija — Cleaner Streets. Healthier Communities.
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-success"
+                                    data-bs-dismiss="modal">Understood</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- <div class="container-fluid work">
+        <h1>How We Work</h1>
+
+        <h4>Simple Steps. Real Impact.</h4>
+
+        <h6> At Clean Naija, we make cleanliness easier by giving individuals and communities a practical way to take
+            action.
+        </h6>
+
+        <h2>1. Report a Dirty Public Space</h2>
+        <p>See overflowing refuse, littered streets, or blocked drainage? Submit a report through our platform so we can
+            review the issue and assess how best to help.
+        </p>
+
+        <h2>2. We Review and Plan</h2>
+        <p>Our team reviews submitted reports, considers the location and available resources, and identifies suitable
+            cleanup opportunities. Where necessary, we may work with community members or relevant authorities.
+        </p>
+
+        <h2>3. Public Cleanup at No Cost</h2>
+        <p>Where a cleanup can be arranged, we work towards making public spaces cleaner without charging residents for
+            the
+            public-cleaning effort.
+        </p>
+
+        <h2>4. Book a House-Cleaning Service</h2>
+        <p>Need help keeping your home or compound clean? Choose our paid cleaning service, provide your details, and
+            arrange a suitable time with our team.</p>
+
+        <h2>5. Cleaner Spaces, Healthier Communities.
+        </h2>
+        <p>Whether through community cleanup efforts or professional home cleaning, our goal is to encourage cleaner
+            surroundings and healthier living.</p>
+
+        <p>Clean Naija — Cleaner Streets. Healthier Communities.</p>
+    </div> -->
+
+
+
+    <section class="how" id="how">
+        <div class="container">
+            <h2 class="section-title">How We Work</h2>
+            <p class="section-subtitle">Simple Steps. Real Impact.</p>
+            <p class="mb-5">At Clean Naija, we make cleanliness easier by giving individuals and communities a practical
+                way to take action.</p>
+
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="step-card reveal">
+                        <div class="step-number"><b>1</b></div>
+                        <h3>Report a Dirty Public Space</h3>
+                        <p>See overflowing refuse, littered streets, or blocked drainage? Submit a report through our
+                            platform so we can review the issue.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="step-card reveal">
+                        <div class="step-number"><b>2</b></div>
+                        <h3>We Review and Plan</h3>
+                        <p>Our team reviews reports, considers the location and available resources, and identifies
+                            suitable cleanup opportunities.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="step-card reveal">
+                        <div class="step-number"><b>3</b><span class="fr">FREE</span></div>
+                        <h3>Public Cleanup at No Cost</h3>
+                        <p>Where a cleanup can be arranged, we work towards making public spaces cleaner without
+                            charging residents for the public cleaning.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="step-card reveal">
+                        <div class="step-number"><b>4</b><SPAN class="pd">PAID</SPAN></div>
+                        <h3>Book a House-Cleaning Service</h3>
+                        <p>Need help keeping your home or compound clean? Choose our paid cleaning service, provide your
+                            details, and arrange a suitable time with our team.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="location-section py-5">
+        <div class="container">
+
+
+            <div class="floating-cleaning-buttons">
+
+                <a href="house.html" class="floating-btn house-btn">
+                    <i class="fa-solid fa-house"></i>
+                    <span>House Cleaning</span>
+                </a>
+
+                <a href="public.html" class="floating-btn public-btn">
+                    <i class="fa-solid fa-leaf"></i>
+                    <span>Public Cleaning</span>
+                </a>
+
+            </div>
+
+
+            <section class="house-cleaning-section">
+                <div class="container">
+
+                    <div class="house-cleaning-heading  py-5">
+                        <span class="section-label"> <a class="navbar-brand fs-1" href="#">Clean<span
+                                    class="bg-success text-white p-1 fs-3"><i
+                                        class="fa-solid fa-leaf"></i>NAIJA</span></a> • PAID SERVICE</span>
+
+                        <h1>Give Your Home the Clean It Deserves.</h1>
+
+                        <p>
+                            From individual rooms to entire compounds, Clean Naija
+                            helps you create a cleaner, healthier, and more comfortable
+                            living space. Choose what needs cleaning, share the details,
+                            and let our team assess your request.
+                        </p>
+
+                        <a href="#booking-form" class="btn btn-success">
+                            Book a Cleaning
+                        </a>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <section class="public-cleaning-section py-5">
+                <div class="container">
+
+                    <div class="public-cleaning-heading">
+                        <span class="section-label"> <a class="navbar-brand fs-1" href="#">Clean<span
+                                    class="bg-success text-white p-1 fs-3"><i
+                                        class="fa-solid fa-leaf"></i>NAIJA</span></a> • FREE PUBLIC SERVICE</span>
+
+                        <h1>Cleaner Communities Start With Us.</h1>
+
+                        <p>
+                            From dirty roadsides to blocked drainage and untidy public
+                            spaces, Clean Naija brings communities together to create
+                            a cleaner and healthier environment. Report a dirty public
+                            place, join our cleanup efforts, and help make a difference
+                            in your community.
+                        </p>
+
+                        <a href="#report-form" class="btn btn-success">
+                            Report a Dirty Place
+                        </a>
+                    </div>
+
+                </div>
+            </section>
+
+
+
+
+            <div class="text-center mb-5">
+                <h1 class="fw-bold">Where Are You Located?</h1>
+                <p class="text-secondary">
+                    Help us locate you so we can build cleaner communities.
+                </p>
+            </div>
+
+            <div class="card border-0 shadow-sm rounded-4">
+                <div class="card-body p-4">
+                    <div class="row g-4">
+
+
+                        <div class="col-lg-5">
+
+                            <h4 class="fw-bold mb-4">
+                                <i class="fa-solid fa-location-dot text-success me-2"></i>
+                                Enter Your Location
+                            </h4>
+
+                            <form id="locationForm">
+
+                                <div class="mb-3">
+                                    <label for="state" class="form-label">State</label>
+                                    <select id="state" class="form-select" required>
+                                        <option value="">Select a state</option>
+                                        <option value="abia">Abia — Umuahia</option>
+                                        <option value="adammawa">Adamawa — Yola</option>
+                                        <option value="akwa-ibom">Akwa Ibom — Uyo</option>
+                                        <option value="anambra">Anambra — Awka</option>
+                                        <option value="bauchi">Bauchi — Bauchi</option>
+                                        <option value="bayelsa">Bayelsa — Yenagoa</option>
+                                        <option value="benue">Benue — Makurdi</option>
+                                        <option value="borno">Borno — Maiduguri</option>
+                                        <option value="cross-river">Cross River — Calabar</option>
+                                        <option value="delta">Delta — Asaba</option>
+                                        <option value="ebonyi">Ebonyi — Abakaliki</option>
+                                        <option value="edo">Edo — Benin City</option>
+                                        <option value="ekiti">Ekiti — Ado-Ekiti</option>
+                                        <option value="enugu">Enugu — Enugu</option>
+                                        <option value="gombe">Gombe — Gombe</option>
+                                        <option value="imo">Imo — Owerri</option>
+                                        <option value="jigawa">Jigawa — Dutse</option>
+                                        <option value="kaduna">Kaduna — Kaduna</option>
+                                        <option value="kano">Kano — Kano</option>
+                                        <option value="katsina">Katsina — Katsina</option>
+                                        <option value="kebbi">Kebbi — Birnin Kebbi</option>
+                                        <option value="kogi">Kogi — Lokoja</option>
+                                        <option value="kwara">Kwara — Ilorin</option>
+                                        <option value="lagos">Lagos — Ikeja</option>
+                                        <option value="nasarawa">Nasarawa — Lafia</option>
+                                        <option value="niger">Niger — Minna</option>
+                                        <option value="ogun">Ogun — Abeokuta</option>
+                                        <option value="ondo">Ondo — Akure</option>
+                                        <option value="osun">Osun — Osogbo</option>
+                                        <option value="oyo">Oyo — Ibadan</option>
+                                        <option value="plateau">Plateau — Jos</option>
+                                        <option value="rivers">Rivers — Port Harcourt</option>
+                                        <option value="sokoto">Sokoto — Sokoto</option>
+                                        <option value="taraba">Taraba — Jalingo</option>
+                                        <option value="yobe">Yobe — Damaturu</option>
+                                        <option value="zamfara">Zamfara — Gusau</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="city" class="form-label">City / Town</label>
+                                    <input type="text" id="city" class="form-control" placeholder="e.g. Ikeja, Abeokuta"
+                                        required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="address" class="form-label">Street Address</label>
+                                    <input type="text" id="address" class="form-control"
+                                        placeholder="Enter your street or area" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="landmark" class="form-label">
+                                        Nearby Landmark (Optional)
+                                    </label>
+                                    <input type="text" id="landmark" class="form-control"
+                                        placeholder="School, market or bus stop">
+                                </div>
+
+                                <button type="button" id="currentLocation" class="btn btn-outline-success w-100 mb-3">
+                                    <i class="fa-solid fa-crosshairs me-2"></i>
+                                    Use My Current Location
+                                </button>
+
+                                <div id="locationStatus" class="alert alert-success small">
+                                    Select your location on the map.
+                                </div>
+
+                                <button type="submit" class="btn btn-success w-100 py-3">
+                                    <i class="fa-solid fa-check me-2"></i>
+                                    Save Location
+                                </button>
+
+                            </form>
+                        </div>
+
+
+                        <div class="col-lg-7">
+
+                            <div class="input-group mb-3">
+                                <input type="text" id="searchLocation" class="form-control"
+                                    placeholder="Search for a street or landmark">
+
+                                <button type="button" id="searchButton" class="btn btn-success">
+                                    Search
+                                </button>
+                            </div>
+
+                            <div id="map"></div>
+
+                            <div class="bg-light rounded-3 p-3 mt-3">
+                                <h6 class="fw-bold">
+                                    <i class="fa-solid fa-map-pin text-success me-2"></i>
+                                    Selected Location
+                                </h6>
+
+                                <p id="selectedAddress" class="text-secondary small">
+                                    Click on the map to select a location.
+                                </p>
+
+                                <p class="small mb-1">
+                                    <strong>Latitude:</strong>
+                                    <span id="latitude">Not selected</span>
+                                </p>
+
+                                <p class="small mb-0">
+                                    <strong>Longitude:</strong>
+                                    <span id="longitude">Not selected</span>
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="contact-footer ">
+        <div class="container">
+            <div class="row text-align-center align-items-center gy-3">
+                <div class="col-md-6">
+                    <h5><i class="fa-solid fa-leaf me-2"></i>Clean Naija</h5>
+                    <p>Cleaner Streets. Healthier Communities.</p>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://wa.me/2349035066048" target="_blank" rel="noopener noreferrer"
+                        aria-label="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="https://www.tiktok.com/@sunkanmeey" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                </div>
+            
+
+
+                <div class="col-md-6 text-md-end">
+                    <a href="index.html">Home</a>
+                    <a href="public.html">Public Cleaning</a>
+                    <a href="house.html">House Cleaning</a>
+                </div>
+            </div>
+
+            <hr>
+
+            <p class="text-center mb-0">
+                &copy; <span id="currentYear"></span> Clean Naija. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="style.js"></script>
+</body>
+
+</html>

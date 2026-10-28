@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public Cleaning | Clean ☘ Naija</title>
+    <link rel="icon" href="images/OIP.webp">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+
+<body>
+    <section class="public-cleaning-section py-5">
+
+        <div class="floating-cleaning-buttons">
+
+            <a href="house.html" class="floating-btn house-btn">
+
+                <span>House Cleaning</span>
+            </a>
+
+            <a href="public.html" class="floating-btn public-btn">
+                <i class="fa-solid fa-leaf"></i>
+                <span>Public Cleaning</span>
+            </a>
+            <a href="index.html" class="floating-btn public-btn">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+            </a>
+
+        </div>
+        <div class="container">
+
+            <div class="public-cleaning-heading">
+                <span class="section-label"> <a class="navbar-brand fs-1" href="#">Clean<span
+                            class="bg-success text-white p-1 fs-3"><i class="fa-solid fa-leaf"></i>NAIJA</span></a> •
+                    FREE PUBLIC SERVICE</span>
+
+                <h1>Cleaner Communities Start With Us.</h1>
+
+                <p>
+                    From dirty roadsides to blocked drainage and untidy public
+                    spaces, Clean Naija brings communities together to create
+                    a cleaner and healthier environment. Report a dirty public
+                    place, join our cleanup efforts, and help make a difference
+                    in your community.
+                </p>
+
+                <a href="#report-form" class="btn btn-success">
+                    Report a Dirty Place
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <div class="text-center mb-5">
+        <h1 class="fw-bold">Where Are You Located?</h1>
+        <p class="text-secondary">
+            Help us locate you so we can build cleaner communities.
+        </p>
+    </div>
+
+    <div class="card border-0 shadow-sm rounded-4">
+        <div class="card-body p-4">
+            <div class="row g-4">
+
+
+                <div class="col-lg-5">
+
+                    <h4 class="fw-bold mb-4">
+                        <i class="fa-solid fa-location-dot text-success me-2"></i>
+                        Enter Your Location
+                    </h4>
+
+                    <form id="locationForm">
+
+                        <div class="mb-3">
+                            <label for="state" class="form-label">State</label>
+                            <select id="state" class="form-select" required>
+                                <option value="">Select a state</option>
+                                <option value="abia">Abia — Umuahia</option>
+                                <option value="adammawa">Adamawa — Yola</option>
+                                <option value="akwa-ibom">Akwa Ibom — Uyo</option>
+                                <option value="anambra">Anambra — Awka</option>
+                                <option value="bauchi">Bauchi — Bauchi</option>
+                                <option value="bayelsa">Bayelsa — Yenagoa</option>
+                                <option value="benue">Benue — Makurdi</option>
+                                <option value="borno">Borno — Maiduguri</option>
+                                <option value="cross-river">Cross River — Calabar</option>
+                                <option value="delta">Delta — Asaba</option>
+                                <option value="ebonyi">Ebonyi — Abakaliki</option>
+                                <option value="edo">Edo — Benin City</option>
+                                <option value="ekiti">Ekiti — Ado-Ekiti</option>
+                                <option value="enugu">Enugu — Enugu</option>
+                                <option value="gombe">Gombe — Gombe</option>
+                                <option value="imo">Imo — Owerri</option>
+                                <option value="jigawa">Jigawa — Dutse</option>
+                                <option value="kaduna">Kaduna — Kaduna</option>
+                                <option value="kano">Kano — Kano</option>
+                                <option value="katsina">Katsina — Katsina</option>
+                                <option value="kebbi">Kebbi — Birnin Kebbi</option>
+                                <option value="kogi">Kogi — Lokoja</option>
+                                <option value="kwara">Kwara — Ilorin</option>
+                                <option value="lagos">Lagos — Ikeja</option>
+                                <option value="nasarawa">Nasarawa — Lafia</option>
+                                <option value="niger">Niger — Minna</option>
+                                <option value="ogun">Ogun — Abeokuta</option>
+                                <option value="ondo">Ondo — Akure</option>
+                                <option value="osun">Osun — Osogbo</option>
+                                <option value="oyo">Oyo — Ibadan</option>
+                                <option value="plateau">Plateau — Jos</option>
+                                <option value="rivers">Rivers — Port Harcourt</option>
+                                <option value="sokoto">Sokoto — Sokoto</option>
+                                <option value="taraba">Taraba — Jalingo</option>
+                                <option value="yobe">Yobe — Damaturu</option>
+                                <option value="zamfara">Zamfara — Gusau</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="city" class="form-label">City / Town</label>
+                            <input type="text" id="city" class="form-control" placeholder="e.g. Ikeja, Abeokuta"
+                                required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Street Address</label>
+                            <input type="text" id="address" class="form-control" placeholder="Enter your street or area"
+                                required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="landmark" class="form-label">
+                                Nearby Landmark (Optional)
+                            </label>
+                            <input type="text" id="landmark" class="form-control"
+                                placeholder="School, market or bus stop">
+                        </div>
+
+                        <button type="button" id="currentLocation" class="btn btn-outline-success w-100 mb-3">
+                            <i class="fa-solid fa-crosshairs me-2"></i>
+                            Use My Current Location
+                        </button>
+
+                        <div id="locationStatus" class="alert alert-success small">
+                            Select your location on the map.
+                        </div>
+
+                        <button type="submit" class="btn btn-success w-100 py-3">
+                            <i class="fa-solid fa-check me-2"></i>
+                            Save Location
+                        </button>
+
+                    </form>
+                </div>
+
+
+                <div class="col-lg-7">
+
+                    <div class="input-group mb-3">
+                        <input type="text" id="searchLocation" class="form-control"
+                            placeholder="Search for a street or landmark">
+
+                        <button type="button" id="searchButton" class="btn btn-success">
+                            Search
+                        </button>
+                    </div>
+
+                    <div id="map"></div>
+
+                    <div class="bg-light rounded-3 p-3 mt-3">
+                        <h6 class="fw-bold">
+                            <i class="fa-solid fa-map-pin text-success me-2"></i>
+                            Selected Location
+                        </h6>
+
+                        <p id="selectedAddress" class="text-secondary small">
+                            Click on the map to select a location.
+                        </p>
+
+                        <p class="small mb-1">
+                            <strong>Latitude:</strong>
+                            <span id="latitude">Not selected</span>
+                        </p>
+
+                        <p class="small mb-0">
+                            <strong>Longitude:</strong>
+                            <span id="longitude">Not selected</span>
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <section class="public-cleaning-form py-5" id="public-cleaning-form">
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <span class="badge rounded-pill text-bg-success mb-3">
+                    100% Free Service
+                </span>
+                <h2 class="fw-bold">Report a Public Cleaning Problem</h2>
+                <p class="text-muted">
+                    Tell us about the problem, provide pictures, and help us
+                    organise a community cleanup.
+                </p>
+            </div>
+
+            <form id="publicCleaningForm">
+
+                <div class="card border-0 shadow-sm rounded-4 mb-4">
+                    <div class="card-body p-4">
+
+                        <h4 class="fw-bold mb-4">1. Reporter Information</h4>
+
+                        <div class="row g-3">
+
+                            <div class="col-md-6">
+                                <label for="reporterName" class="form-label">
+                                    Full Name *
+                                </label>
+                                <input type="text" class="form-control" id="reporterName" name="reporterName"
+                                    placeholder="Enter your full name" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="reporterPhone" class="form-label">
+                                    Phone Number *
+                                </label>
+                                <input type="tel" class="form-control" id="reporterPhone" name="reporterPhone"
+                                    placeholder="Enter your phone number" required>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="reporterEmail" class="form-label">
+                                    Email Address (Optional)
+                                </label>
+                                <input type="email" class="form-control" id="reporterEmail" name="reporterEmail"
+                                    placeholder="Enter your email address">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card border-0 shadow-sm rounded-4 mb-4">
+                    <div class="card-body p-4">
+
+                        <h4 class="fw-bold mb-4">2. Public Location Details</h4>
+
+                        <div class="row g-3">
+
+                            <div class="col-md-6">
+                                <label for="problemType" class="form-label">
+                                    Type of Problem *
+                                </label>
+
+                                <select class="form-select" id="problemType" name="problemType" required>
+                                    <option value="">Select a problem</option>
+                                    <option value="Dirty street or roadside">
+                                        Dirty street or roadside
+                                    </option>
+                                    <option value="Blocked gutter or drainage">
+                                        Blocked gutter or drainage
+                                    </option>
+                                    <option value="Illegal waste dumping">
+                                        Illegal waste dumping
+                                    </option>
+                                    <option value="Accumulated refuse">
+                                        Accumulated refuse
+                                    </option>
+                                    <option value="Dirty public space">
+                                        Dirty public space
+                                    </option>
+                                    <option value="Other">
+                                        Other
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="problemSize" class="form-label">
+                                    Estimated Problem Size *
+                                </label>
+
+                                <select class="form-select" id="problemSize" name="problemSize" required>
+                                    <option value="">Select size</option>
+                                    <option value="SM">SM — Small</option>
+                                    <option value="LG">LG — Large</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="publicAddress" class="form-label">
+                                    Location Address *
+                                </label>
+                                <input type="text" class="form-control" id="publicAddress" name="publicAddress"
+                                    placeholder="Street, area, and nearest landmark" required>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="problemDescription" class="form-label">
+                                    Describe the Problem *
+                                </label>
+                                <textarea class="form-control" id="problemDescription" name="problemDescription"
+                                    rows="4" placeholder="Explain what is happening at this location..."
+                                    required></textarea>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="publicPictures" class="form-label">
+                                    Upload Pictures *
+                                </label>
+                                <input type="file" class="form-control" id="publicPictures" name="publicPictures"
+                                    accept="image/*" multiple required>
+                                <small class="text-muted">
+                                    Upload clear pictures showing the condition
+                                    of the public area.
+                                </small>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card border-0 shadow-sm rounded-4 mb-4">
+                    <div class="card-body p-4">
+
+                        <h4 class="fw-bold mb-3">3. Community Volunteers</h4>
+
+                        <p class="text-muted">
+                            The reporter is responsible for arranging 10 community
+                            volunteers to participate in the cleanup.
+                        </p>
+
+                        <div class="mb-4">
+                            <label for="volunteerCount" class="form-label">
+                                Number of Community Volunteers *
+                            </label>
+                            <input type="number" class="form-control" id="volunteerCount" name="volunteerCount" min="10"
+                                max="10" value="10" required>
+                            <small class="text-muted">
+                                Ten community volunteers are required.
+                            </small>
+                        </div>
+
+                        <h5 class="fw-semibold">Cleaning Tools Available</h5>
+                        <p class="text-muted">
+                            Select the tools your community volunteers can provide.
+                        </p>
+
+                        <div class="row g-3">
+
+                            <div class="col-md-4 col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input community-tool" type="checkbox" value="Brooms"
+                                        id="toolBrooms">
+                                    <label class="form-check-label" for="toolBrooms">
+                                        Brooms
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input community-tool" type="checkbox" value="Shovels"
+                                        id="toolShovels">
+                                    <label class="form-check-label" for="toolShovels">
+                                        Shovels
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input community-tool" type="checkbox" value="Rakes"
+                                        id="toolRakes">
+                                    <label class="form-check-label" for="toolRakes">
+                                        Rakes
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input community-tool" type="checkbox" value="Buckets"
+                                        id="toolBuckets">
+                                    <label class="form-check-label" for="toolBuckets">
+                                        Buckets
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input community-tool" type="checkbox" value="Wheelbarrows"
+                                        id="toolWheelbarrows">
+                                    <label class="form-check-label" for="toolWheelbarrows">
+                                        Wheelbarrows
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input community-tool" type="checkbox" value="Waste bags"
+                                        id="toolWasteBags">
+                                    <label class="form-check-label" for="toolWasteBags">
+                                        Waste bags
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="otherCommunityTools" class="form-label">
+                                    Other Tools (Optional)
+                                </label>
+                                <input type="text" class="form-control" id="otherCommunityTools"
+                                    name="otherCommunityTools" placeholder="List any other available tools">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card border-0 shadow-sm rounded-4 mb-4">
+                    <div class="card-body p-4">
+
+                        <h4 class="fw-bold mb-3">4. Clean Naija Team</h4>
+
+                        <p>
+                            Clean Naija plans to provide <strong>5 team members</strong>
+                            and the cleaning tools and equipment required by its team.
+                        </p>
+
+                        <div class="alert alert-success rounded-3">
+                            <strong>Planned cleanup team: 15 people</strong>
+                            <br>
+                            10 community volunteers + 5 Clean Naija team members.
+                        </div>
+
+                        <p class="text-muted mb-0">
+                            Clean Naija will review the reported problem and
+                            coordinate the appropriate equipment for the cleanup.
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="card border-0 shadow-sm rounded-4 mb-4">
+                    <div class="card-body p-4">
+
+                        <h4 class="fw-bold mb-3">5. Team Profiles and Availability</h4>
+
+                        <p class="text-muted">
+                            Review the Clean Naija team profiles, ratings, and
+                            availability before the cleanup is arranged.
+                        </p>
+
+                        <div id="publicWorkerProfiles" class="row g-3">
+                            <div class="col-12">
+                                <div class="alert alert-info mb-0">
+                                    Team profiles and live availability will appear
+                                    here when connected to the worker records.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="card border-0 shadow-sm rounded-4 mb-4">
+                    <div class="card-body p-4">
+
+                        <h4 class="fw-bold mb-3">6. Proposed Cleanup Date</h4>
+
+                        <p class="text-muted">
+                            The proposed date is subject to team availability
+                            and confirmation by Clean Naija.
+                        </p>
+
+                        <div class="mb-3">
+                            <label for="preferredCleanupDate" class="form-label">
+                                Preferred Cleanup Date (Optional)
+                            </label>
+                            <input type="date" class="form-control" id="preferredCleanupDate"
+                                name="preferredCleanupDate">
+                        </div>
+
+                        <div class="alert alert-warning mb-0">
+                            Your preferred date is a request, not a confirmed
+                            appointment. Clean Naija must verify availability
+                            before confirming the cleanup.
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="card border-0 shadow-sm rounded-4 mb-4">
+                    <div class="card-body p-4">
+
+                        <h4 class="fw-bold mb-3">7. Review Your Report</h4>
+
+                        <p class="text-muted">
+                            Check your details, problem description, pictures,
+                            volunteers, and available tools before submitting.
+                        </p>
+
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" id="confirmPublicReport" required>
+                            <label class="form-check-label" for="confirmPublicReport">
+                                I confirm that the information provided is accurate
+                                and understand that public cleaning is free.
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-success btn-lg rounded-pill px-5">
+                            Submit Free Cleaning Report
+                        </button>
+
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+    
+    <div class="modal fade" id="publicSuccessModal" tabindex="-1" aria-labelledby="publicSuccessTitle"
+        aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 rounded-4 shadow">
+
+                <div class="modal-body text-center p-4 p-md-5">
+
+                    <div class="success-icon mb-4">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+
+                    <h3 class="fw-bold mb-3" id="publicSuccessTitle">
+                        Report Submitted Successfully!
+                    </h3>
+
+                    <p class="text-muted mb-4">
+                        Thank you for taking action to make Nigeria cleaner.
+                        Your public cleaning report has been received.
+                    </p>
+
+                    <div class="success-reference p-3 rounded-3 mb-4">
+                        <small class="text-muted d-block mb-1">
+                            Your Report Reference
+                        </small>
+                        <strong id="publicReportReference"></strong>
+                    </div>
+
+                    <div class="alert alert-success text-start">
+                        <i class="fa-solid fa-leaf me-2"></i>
+                        <strong>Remember:</strong> Public Cleaning is completely
+                        free. Your report is pending review, and the cleanup date
+                        will be confirmed after the necessary arrangements.
+                    </div>
+
+                    <button type="button" class="btn btn-success rounded-pill px-5 py-2" data-bs-dismiss="modal">
+                        Done
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="style.js"></script>
+</body>
+
+</html>
