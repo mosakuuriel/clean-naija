@@ -105,6 +105,19 @@ body:not(.light-mode) small {
     margin-top: 2rem;
 } */
 
+.navbar .nav-link{
+    color: rgb(122, 121, 121);
+    margin: 0.5rem;
+}
+
+
+.navbar .nav-link:hover{
+    color: #121212;
+    margin: 0.5rem;
+    padding: 0.8rem;
+    background-color: #0d613a;
+    border-radius: 2rem;
+}
 .cl img {
     width: 300px;
     border-radius: 3rem;
